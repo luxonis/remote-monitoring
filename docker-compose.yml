@@ -1,0 +1,31 @@
+version: '2'
+
+services:
+  api:
+    build:
+      context: api
+      dockerfile: Dockerfile
+    env_file:
+      - local.env
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  web:
+    build:
+      context: web
+      dockerfile: Dockerfile
+    volumes:
+    - ./web:/sources
+    ports:
+      - 3000:80
+    depends_on:
+      - api
+  db:
+    image: postgres
+    env_file:
+      - local.env
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgresql_data:/var/lib/postgresql/data/

@@ -1,0 +1,3 @@
+SHELL=/bin/bash
+
+0 1 * * * root . /project_env.sh; /usr/local/bin/python /manage.py sendsummaries >> /var/log/cron.log 2>&1

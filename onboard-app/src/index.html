@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luxtronic Camera</title>
+    <script src="chart.bundle.min.js" integrity="sha256-TQq84xX6vkwR0Qs1qH5ADkP+MvH0W+9E7TdHJsoIQiM="
+            crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+<h1 style="text-align: center">Luxtronic Camera Status Page</h1>
+<div>
+    <div style="width: 33%; max-height: 400px; display: inline-block">
+        <canvas id="cpuCores" style="display: inline-block"></canvas>
+    </div>
+    <div style="width: 33%; max-height: 400px; display: inline-block">
+        <canvas id="cpuOverall" style="display: inline-block"></canvas>
+    </div>
+    <div style="width: 33%; max-height: 400px; display: inline-block">
+        <canvas id="ram" style="display: inline-block"></canvas>
+    </div>
+</div>
+<div>
+    <div style="width: 33%; max-height: 400px; display: inline-block">
+        <canvas id="diskUsagePerc" style="display: inline-block"></canvas>
+    </div>
+    <div style="width: 33%; max-height: 400px; display: inline-block">
+        <canvas id="diskSpaceLeft" style="display: inline-block"></canvas>
+    </div>
+    <div style="width: 33%; max-height: 400px; display: inline-block">
+        <canvas id="network" style="display: inline-block"></canvas>
+    </div>
+</div>
+<div style="max-height: 800px">
+    <canvas id="temperatures"></canvas>
+</div>
+<script src="main.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@import '~@fortawesome/fontawesome-free/less/fontawesome.less';
+@import '~antd/dist/antd.less';
+@import 'palette';
+@import 'camera';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: @palette-blue;
+}
+
+.page-wrapper {
+  font-family: 'Roboto', serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 15px;
+}
+
+main {
+  margin-top: 40px;
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+#dashboardMap {
+  height: calc(100vh - 200px);
+}
+
+.leaflet-overlay-pane svg {
+  pointer-events: auto;
+}
+
+.map-popup {
+  .leaflet-popup-content {
+    margin: 0 10px;
+    p {
+      margin: 5px 0;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}
